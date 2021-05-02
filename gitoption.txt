@@ -7,6 +7,7 @@ ssh-keygen -t rsa -C "youremail@example.com"
 点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title
 下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。
 key默认在C:\Users\Administrator\.ssh下的id_rsa.pub文件中
+
 #create a new repository on the command line
 echo "# blink-detection" >> README.md
 git init
@@ -15,7 +16,9 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:RoveLan/blink-detection.git
 git push -u origin main
+
 #push an existing repository from the command line
+git remote rm origin
 git remote add origin git@github.com:RoveLan/blink-detection.git
 git branch -M main
 git push -u origin main
