@@ -1,0 +1,27 @@
+git init
+git add .(注意这个"."，是有空格的，"."代表这个test这个文件夹下的目录全部都提交。
+你也可以通过git add 文件名  提交指定的文件)把文件添加到缓存区
+然后可以通过git status命令
+ssh-keygen -t rsa -C "youremail@example.com"
+登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，
+点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title
+下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。
+key默认在C:\Users\Administrator\.ssh下的id_rsa.pub文件中
+#create a new repository on the command line
+echo "# blink-detection" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:RoveLan/blink-detection.git
+git push -u origin main
+#push an existing repository from the command line
+git remote add origin git@github.com:RoveLan/blink-detection.git
+git branch -M main
+git push -u origin main
+
+1,从已有的分支创建新的分支(如从master分支),创建一个dev分支
+git checkout -b dev
+git push origin dev
+删除分支
+git push origin --delete dev
